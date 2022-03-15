@@ -2,7 +2,9 @@ import 'package:advance_pdf_viewer_fork/advance_pdf_viewer_fork.dart';
 import 'package:flutter/material.dart';
 
 class PdfView extends StatefulWidget {
-  const PdfView({Key? key}) : super(key: key);
+  final String keyName;
+
+  const PdfView({Key? key, required this.keyName}) : super(key: key);
 
   @override
   State<PdfView> createState() => _PdfViewState();
@@ -19,8 +21,14 @@ class _PdfViewState extends State<PdfView> {
   }
 
   loadDocument() async {
-    document =
-        await PDFDocument.fromAsset('assets/Yonilgilarklassifikatsiyasi.pdf');
+    String parsedString = widget.keyName
+        .replaceAll(RegExp("ʻ|’|‘|`"), '')
+        .replaceAll(' ', '_')
+        .toLowerCase();
+
+    print(parsedString);
+
+    document = await PDFDocument.fromAsset('assets/pdfs/$parsedString.pdf');
 
     setState(() => _isLoading = false);
   }

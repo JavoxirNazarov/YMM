@@ -20,7 +20,7 @@ final PdfItem _secondLesson = PdfItem(
   children: [
     PdfItem(name: 'Yonilg‘ilar klassifikatsiyasi'),
     PdfItem(name: 'Аvtоmоbil bеnzinlаri', children: [
-      PdfItem(name: 'Umumiy ma`lumotlar'),
+      PdfItem(name: 'Аvtоmоbil bеnzinlаrining umumiy ma’lumotlari'),
       PdfItem(name: 'Benzin xossalari'),
       PdfItem(
           name:

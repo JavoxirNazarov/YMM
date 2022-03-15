@@ -27,29 +27,30 @@ class RecursiveVidget extends StatelessWidget {
 
   const RecursiveVidget({Key? key, required this.item}) : super(key: key);
 
+  void _navigateToPdf(BuildContext context) {
+    Navigator.of(context).push(
+      MaterialPageRoute(builder: (context) => PdfView(keyName: item.name)),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return item.children != null
         ? ExpansionTile(
-            collapsedBackgroundColor: Colors.black26,
-            tilePadding: const EdgeInsets.all(3.0),
-            title: Center(child: Text(item.name)),
+            tilePadding: const EdgeInsets.all(4.0),
+            title: Text(item.name),
             children:
-                item.children!.map((e) => RecursiveVidget(item: e)).toList(),
-          )
+                item.children!.map((e) => RecursiveVidget(item: e)).toList())
         : InkWell(
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const PdfView()),
-              );
-            },
+            onTap: () => _navigateToPdf(context),
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 8.0),
-              child: Container(
+              child: SizedBox(
                 height: 50,
-                color: Colors.amber,
-                child: Center(child: Text(item.name)),
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(item.name),
+                ),
               ),
             ),
           );
