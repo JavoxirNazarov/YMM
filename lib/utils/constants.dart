@@ -1,22 +1,25 @@
 import 'package:yonilgimoylashmateriallari/utils/models/pdf_item.dart';
 
-final PdfItem _firstLesson =
-    PdfItem(name: 'Neftdan yonilgʻi moylash materiallarini olish', children: [
-  PdfItem(name: 'Nеft hаqidа qisqа mа’lumоtlаr'),
-  PdfItem(name: 'Yonilg‘i mоylаsh mаtеriаllаrini оlish'),
-  PdfItem(name: 'Neftning elementar tarkibi'),
-  PdfItem(name: 'Neftning guruhiy tarkibi'),
-  PdfItem(name: 'Neftning xossalari'),
-  PdfItem(name: 'Neftdan yonilg‘i moylash materiallarini olish sxemalari'),
-  PdfItem(name: 'Neftni to‘g‘ri haydash'),
-  PdfItem(name: 'Nеftni qаytа ishlаshning ikkilаmchi jаrаyonlаri'),
-  PdfItem(name: 'Mоylоvchi mаtеriаllаrni ishlаb chiqаrish xususiyatlаri'),
-  PdfItem(name: 'Аltеrnаtiv mоtоr yonilg‘ilаrini оlish'),
-  PdfItem(name: 'Bаzаviy yonilg‘ilаr sifаtini yaxshilаsh'),
-]);
+final PdfItem _firstLesson = PdfItem(
+    name: 'Neftdan yonilgʻi moylash materiallarini olish',
+    imagePath: 'assets/images/neft.png',
+    children: [
+      PdfItem(name: 'Nеft hаqidа qisqа mа’lumоtlаr'),
+      PdfItem(name: 'Yonilg‘i mоylаsh mаtеriаllаrini оlish'),
+      PdfItem(name: 'Neftning elementar tarkibi'),
+      PdfItem(name: 'Neftning guruhiy tarkibi'),
+      PdfItem(name: 'Neftning xossalari'),
+      PdfItem(name: 'Neftdan yonilg‘i moylash materiallarini olish sxemalari'),
+      PdfItem(name: 'Neftni to‘g‘ri haydash'),
+      PdfItem(name: 'Nеftni qаytа ishlаshning ikkilаmchi jаrаyonlаri'),
+      PdfItem(name: 'Mоylоvchi mаtеriаllаrni ishlаb chiqаrish xususiyatlаri'),
+      PdfItem(name: 'Аltеrnаtiv mоtоr yonilg‘ilаrini оlish'),
+      PdfItem(name: 'Bаzаviy yonilg‘ilаr sifаtini yaxshilаsh'),
+    ]);
 
 final PdfItem _secondLesson = PdfItem(
   name: 'Yonilg‘ilar',
+  imagePath: 'assets/images/yonilgi.jpeg',
   children: [
     PdfItem(name: 'Yonilg‘ilar klassifikatsiyasi'),
     PdfItem(name: 'Аvtоmоbil bеnzinlаri', children: [
@@ -84,6 +87,7 @@ final PdfItem _secondLesson = PdfItem(
 
 final PdfItem _thirdLesson = PdfItem(
   name: 'Mоylоvchi mаtеriаllаr',
+  imagePath: 'assets/images/moy.jpeg',
   children: [
     PdfItem(name: 'Moylovchi materiallar vazifasi va ishqalanish turlari'),
     PdfItem(
@@ -98,6 +102,7 @@ final PdfItem _thirdLesson = PdfItem(
 
 final PdfItem _fouthLesson = PdfItem(
   name: 'Motor moylari',
+  imagePath: 'assets/images/motor.png',
   children: [
     PdfItem(name: 'Motor moylariga bo‘lgan umumiy talablar'),
     PdfItem(
@@ -117,6 +122,7 @@ final PdfItem _fouthLesson = PdfItem(
 
 final PdfItem _fifthLesson = PdfItem(
   name: 'Transmission moylar',
+  imagePath: 'assets/images/transmissiya.jpeg',
   children: [
     PdfItem(
       name:
@@ -136,6 +142,7 @@ final PdfItem _fifthLesson = PdfItem(
 
 final PdfItem _sixthLesson = PdfItem(
   name: 'Plastik-surkov moylari',
+  imagePath: 'assets/images/plastik.png',
   children: [
     PdfItem(name: 'Plastik-surkov moylarning vazifasi va tarkibi'),
     PdfItem(name: 'Plastik moylarning xossalari'),
@@ -145,6 +152,7 @@ final PdfItem _sixthLesson = PdfItem(
 
 final PdfItem _seventhLesson = PdfItem(
   name: 'Maxsus suyuqliklar',
+  imagePath: 'assets/images/suyuqlik.jpeg',
   children: [
     PdfItem(name: 'Sovituvchi suyuqliklar', children: [
       PdfItem(name: 'Maxsus sovituvchi suyuqliklar'),

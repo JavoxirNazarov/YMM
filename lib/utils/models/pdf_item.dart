@@ -1,7 +1,7 @@
 class PdfItem {
   String name;
   List<PdfItem>? children;
-  bool expanded = false;
+  String? imagePath;
 
-  PdfItem({required this.name, this.children});
+  PdfItem({required this.name, this.children, this.imagePath});
 }

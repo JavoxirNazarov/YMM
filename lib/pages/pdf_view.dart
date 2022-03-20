@@ -26,7 +26,7 @@ class _PdfViewState extends State<PdfView> {
         .replaceAll(' ', '_')
         .toLowerCase();
 
-    print(parsedString);
+    // print(parsedString);
 
     document = await PDFDocument.fromAsset('assets/pdfs/$parsedString.pdf');
 
