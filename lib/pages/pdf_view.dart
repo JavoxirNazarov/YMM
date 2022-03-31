@@ -21,14 +21,7 @@ class _PdfViewState extends State<PdfView> {
   }
 
   loadDocument() async {
-    String parsedString = widget.keyName
-        .replaceAll(RegExp("ʻ|’|‘|`"), '')
-        .replaceAll(' ', '_')
-        .toLowerCase();
-
-    // print(parsedString);
-
-    document = await PDFDocument.fromAsset('assets/pdfs/$parsedString.pdf');
+    document = await PDFDocument.fromAsset('assets/pdfs/${widget.keyName}.pdf');
 
     setState(() => _isLoading = false);
   }
