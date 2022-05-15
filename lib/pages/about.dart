@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class AboutPage extends StatelessWidget {
   const AboutPage({Key? key}) : super(key: key);
@@ -9,8 +10,18 @@ class AboutPage extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Kontaktlar'),
         ),
-        body: const Center(
-          child: Text('Xushnaev Obid'),
+        body: Center(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text('Xushnaev Obid'),
+              InkWell(
+                child: const Text('o.xushnayev@gmail.com'),
+                onTap: () => launchUrl(Uri.parse('o.xushnayev@gmail.com')),
+              )
+            ],
+          ),
         ));
   }
 }
